@@ -28,9 +28,13 @@ requests==2.33.1
     # via -r requirements.in
 ruff==0.15.12
     # via -r requirements.in
+types-requests==2.33.0.20260408
+    # via -r requirements.in
 typing-extensions==4.15.0
     # via mypy
 urllib3==2.6.3
-    # via requests
+    # via
+    #   requests
+    #   types-requests
 uv==0.11.7
     # via -r requirements.in
