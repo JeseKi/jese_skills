@@ -39,8 +39,7 @@ The script loads `.env` files itself and reads:
 `.env` lookup order:
 
 1. current working directory `.env`
-2. repository root `.env`
-3. `jese_image_gen/.env`
+2. `~/.jese_skills/.env`
 
 ## Examples
 

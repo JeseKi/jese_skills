@@ -58,6 +58,15 @@ def test_parse_dotenv_line() -> None:
     assert generate_image.parse_dotenv_line("") is None
 
 
+def test_dotenv_paths(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    monkeypatch.chdir(tmp_path)
+
+    assert generate_image.dotenv_paths() == [
+        tmp_path / ".env",
+        Path.home() / ".jese_skills" / ".env",
+    ]
+
+
 def test_load_dotenv_does_not_overwrite_existing_env(
     monkeypatch: pytest.MonkeyPatch, tmp_path: Path
 ) -> None:

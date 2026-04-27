@@ -17,7 +17,6 @@ DEFAULT_API_BASE_URL = "https://ki-llmapi.kispace.cc/v1beta/models"
 TOKEN_ENV_VAR = "JESE_IMAGE_GEN_API_TOKEN"
 API_BASE_URL_ENV_VAR = "JESE_IMAGE_GEN_API_BASE_URL"
 SKILL_ROOT = Path(__file__).resolve().parents[1]
-REPO_ROOT = SKILL_ROOT.parent
 DEFAULT_OUTPUT_DIR = SKILL_ROOT / "outputs"
 
 
@@ -74,8 +73,7 @@ def parse_args() -> argparse.Namespace:
 def dotenv_paths() -> list[Path]:
     candidates = [
         Path.cwd() / ".env",
-        REPO_ROOT / ".env",
-        SKILL_ROOT / ".env",
+        Path.home() / ".jese_skills" / ".env",
     ]
     unique_paths: list[Path] = []
     for path in candidates:
