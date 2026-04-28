@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help=(
             "Output image path. Defaults to a timestamped PNG under "
-            "jese_image_gen/outputs/."
+            "jese-image-gen/outputs/."
         ),
     )
     parser.add_argument(

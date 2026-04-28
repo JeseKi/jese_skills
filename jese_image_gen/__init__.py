@@ -1,1 +1,0 @@
-"""Jese image generation skill."""

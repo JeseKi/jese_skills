@@ -1,5 +1,5 @@
 ---
-name: jese_image_gen
+name: jese-image-gen
 description: Generate or transform images through the local Jese image generation API. Use when the user asks to create an image file from a prompt, optionally with aspect ratio, size, model, output path, or reference images; the bundled script reads credentials from .env or environment variables so the agent never needs to see API tokens.
 ---
 
@@ -19,7 +19,7 @@ Use this skill to generate an actual image file with the bundled script.
 3. Run the script from the repository root:
 
 ```bash
-python jese_image_gen/scripts/generate_image.py \
+python jese-image-gen/scripts/generate_image.py \
   --prompt "A studio product photo of a translucent blue glass vase" \
   --ratio 1:1 \
   --size 2K
@@ -46,7 +46,7 @@ The script loads `.env` files itself and reads:
 Generate from text:
 
 ```bash
-python jese_image_gen/scripts/generate_image.py \
+python jese-image-gen/scripts/generate_image.py \
   --prompt "A clean icon-style illustration of a bamboo steamer" \
   --ratio 1:1
 ```
@@ -54,7 +54,7 @@ python jese_image_gen/scripts/generate_image.py \
 Generate with references:
 
 ```bash
-python jese_image_gen/scripts/generate_image.py \
+python jese-image-gen/scripts/generate_image.py \
   --prompt "Use the reference product shape, render it as a premium catalog image" \
   --ratio 4:3 \
   --input-image ./reference.png

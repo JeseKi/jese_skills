@@ -2,4 +2,4 @@
 __pycache__/
 *.py[cod]
 *.response.json
-jese_image_gen/outputs/
+jese-image-gen/outputs/
