@@ -67,23 +67,34 @@ description: Use when the user wants to learn, plan, or execute a complex engine
 
 除非用户指定其他位置，否则优先使用项目内文档目录。
 
+如果用户主要使用中文交流，阶段目录和阶段文档文件名也应该优先使用中文，避免用户在中文路线图中反复理解英文文件名。
+
+中文文件名示例：
+
+- `路线图.md`
+- `验收条件.md`
+- `记录与复盘.md`
+- `文件计划.md`
+- `运行时检查清单.md`
+- `接口契约.md`
+
+英文文件名只在用户明确偏好英文、项目已有强约定，或外部工具依赖固定文件名时使用。
+
 示例：
 
 ```text
 docs/<目标-roadmap>/
   index.md
   00-<基线阶段>/
-    roadmap.md
-    acceptance.md
-    file-plan.md
-    system-inventory.md
-    risk-register.md
-    notes.md
+    路线图.md
+    验收条件.md
+    文件计划.md
+    记录与复盘.md
   01-<下一阶段>/
-    roadmap.md
-    acceptance.md
-    file-plan.md
-    notes.md
+    路线图.md
+    验收条件.md
+    文件计划.md
+    记录与复盘.md
 ```
 
 只在进入某个阶段时创建该阶段详细目录。除非用户明确要求，不要一次性创建所有未来阶段的详细文件。
@@ -94,15 +105,15 @@ docs/<目标-roadmap>/
 
 默认最小文档：
 
-- `roadmap.md`：这个阶段做什么，如何承接前一阶段，如何解锁后一阶段。
-- `acceptance.md`：满足什么核心条件才算功能完成。
-- `notes.md`：必要决策、运行事实、遗留风险。
+- `路线图.md`：这个阶段做什么，如何承接前一阶段，如何解锁后一阶段。
+- `验收条件.md`：满足什么核心条件才算功能完成。
+- `记录与复盘.md`：必要决策、运行事实、遗留风险。
 
 按需扩展文档：
 
-- `file-plan.md`：预计读取、新增、修改哪些文件，以及哪些文件不应该动。
-- `runtime-checklist.md`：只有阶段强依赖运行时事实时才创建，例如 ROS2 topic / TF / service 验证。
-- `tf-plan.md`、`data-flow.md`、`api-contract.md` 等领域专用文档：只有它们能减少当前阶段歧义或直接服务下一阶段时才创建。
+- `文件计划.md`：预计读取、新增、修改哪些文件，以及哪些文件不应该动。
+- `运行时检查清单.md`：只有阶段强依赖运行时事实时才创建，例如 ROS2 topic / TF / service 验证。
+- `TF方案.md`、`数据流.md`、`接口契约.md` 等领域专用文档：只有它们能减少当前阶段歧义或直接服务下一阶段时才创建。
 
 如果一个阶段通过少量代码或配置即可达到核心验收，不要为了“文档完整”额外制造大量待填写项。
 
