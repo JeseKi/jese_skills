@@ -16,10 +16,10 @@ Use this skill to generate an actual image file with the bundled script.
    - `--model`, default `nano-banana-fast`
    - repeated `--input-image` for references
    - `--output` for an explicit destination
-3. Run the script from the repository root:
+3. Run the script via the installed skill path:
 
 ```bash
-python jese-image-gen/scripts/generate_image.py \
+.venv/bin/python .agents/skills/jese-image-gen/scripts/generate_image.py \
   --prompt "A studio product photo of a translucent blue glass vase" \
   --ratio 1:1 \
   --size 2K
@@ -46,7 +46,7 @@ The script loads `.env` files itself and reads:
 Generate from text:
 
 ```bash
-python jese-image-gen/scripts/generate_image.py \
+.venv/bin/python .agents/skills/jese-image-gen/scripts/generate_image.py \
   --prompt "A clean icon-style illustration of a bamboo steamer" \
   --ratio 1:1
 ```
@@ -54,7 +54,7 @@ python jese-image-gen/scripts/generate_image.py \
 Generate with references:
 
 ```bash
-python jese-image-gen/scripts/generate_image.py \
+.venv/bin/python .agents/skills/jese-image-gen/scripts/generate_image.py \
   --prompt "Use the reference product shape, render it as a premium catalog image" \
   --ratio 4:3 \
   --input-image ./reference.png

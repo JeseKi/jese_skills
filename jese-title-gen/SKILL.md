@@ -15,10 +15,10 @@ Use this skill to generate non-structured title suggestions from article content
    - `--model`, default `gemini-3.5-flash`
    - `--base-url`, default from `JESE_LLM_API_BASE_URL`
    - `--api-key`, default from `JESE_LLM_API_KEY`
-3. Run the script from the repository root:
+3. Run the script via the installed skill path:
 
 ```bash
-python jese-title-gen/scripts/generate_titles.py \
+.venv/bin/python .agents/skills/jese-title-gen/scripts/generate_titles.py \
   --num 8 \
   --content-file ./article.md
 ```
@@ -44,7 +44,7 @@ The script loads `.env` files itself and reads:
 Generate 8 titles:
 
 ```bash
-python jese-title-gen/scripts/generate_titles.py \
+.venv/bin/python .agents/skills/jese-title-gen/scripts/generate_titles.py \
   --num 8 \
   --content-file ./article.md
 ```
@@ -52,7 +52,7 @@ python jese-title-gen/scripts/generate_titles.py \
 Use a different model:
 
 ```bash
-python jese-title-gen/scripts/generate_titles.py \
+.venv/bin/python .agents/skills/jese-title-gen/scripts/generate_titles.py \
   --model gemini-3.5-flash \
   --num 5 \
   --content-file ./article.md
